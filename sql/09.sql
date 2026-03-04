@@ -4,4 +4,4 @@
  */
 select s.first_name, s.last_name, sum(p.amount) as "sum" from staff s join payment p on s.staff_id = p.staff_id WHERE p.payment_date >= '2020-01-01'
   AND p.payment_date < '2020-02-01'
-GROUP BY s.staff_id, s.first_name, s.last_name;
+GROUP BY s.staff_id, s.first_name, s.last_name order by s.first_name;
